@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicID-lookup</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap');
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .item{
+            width: 80vh;
+            text-align: center;
+        }
+        input[type="text"] {
+            font-size: 1.4em;
+            width: 60%;
+            height: 20px;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 13px 20px 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 800px) {
+            .item {
+                width: 100%;
+            }
+            input[type="text"] {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .item {
+                width: 100%;
+            }
+            input[type="text"] {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="item" action="/epicid" method="post">
+            <input type="text" name="epicid" id="epicid" placeholder="Enter EpicID" autocomplete="off" required>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>
