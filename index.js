@@ -24,7 +24,6 @@ app.get('/', (req,res) => {
 
 app.post('/epicid', (req, res) => {
     const data = req.body.epicid;
-    console.log(url + data)
     fetch(url + data, reqestoption)
     .then(response => response.json())
     .then(data => {
